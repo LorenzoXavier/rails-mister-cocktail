@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="cards">
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('drink/whiskey.jpg') %>)">
+      <h1>Name - <%= @cocktail.name %></h1>
+    </div>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+     <%= f.association :ingredient %>
+        <%= f.submit %>
+      <% end %>
+  </div>
+</div>
+
+<h2><%= link_to "Return to all cocktails", cocktails_path(@cocktails), class: "btn-ghost" %></h2>
+
+
