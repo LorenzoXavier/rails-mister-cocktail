@@ -33,6 +33,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.9.1'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -42,6 +43,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+gem 'carrierwave', '~> 1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

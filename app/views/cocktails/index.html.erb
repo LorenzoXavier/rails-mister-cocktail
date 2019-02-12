@@ -1,6 +1,6 @@
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('background/cocktails.jpg') %>)">
   <li>
-  <h1>Let's make a cocktail</h1>
+  <h1>Mad Mollys Molecular Marvels</h1>
     <p><%= link_to "Add a cocktail", new_cocktail_path, class: "btn-ghost" %></p>
   </li>
 </div>
@@ -8,11 +8,13 @@
 <div class="container">
 <% @cocktails.each do |drink| %>
   <div class="card-product">
-    <img src="https://picsum.photos/120/80?random">
+    <%= cl_image_tag drink.photo, height: 100, width: 100, crop: :fill %>
+    <!-- <img src="https://picsum.photos/120/80?random"> -->
     <div class="card-product-infos">
       <%= link_to drink.name, cocktail_path(drink) %>
     </div>
   </div>
 <% end %>
 </div>
+
 

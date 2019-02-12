@@ -1,21 +1,26 @@
+<div class="card-category-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('background/back-small.jpg') %>)">
+</div>
+
+<div class="navbar-lewagon">
+   <div class="navbar-lewagon-actions d-none d-sm-flex">
+
+     <%= link_to "Back to all", cocktails_path(@cocktails), class: "btn-ghost-dark" %>
+   </div>
+ </div>
+
+
 <div class="container">
   <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('drink/whiskey.jpg') %>)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @cocktail.photo, height: 1000, width: 600, crop: :fill %>)">
       <li>
-        <h1>Name - <%= @cocktail.name %></h1>
+        <h1>Name - <%= @cocktail.name %> </h1>
         <% @doses.each do |dose| %>
-
           <p><%= dose.description %> of <%= dose.ingredient.name %>   <%= link_to " ", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } , class: "fa fa-trash destroy_dose" %></p>
-
         <% end %>
+        <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail, @dose), class: "btn-ghost" %>
       </li>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <p><%= link_to "add ingredients and amounts", new_cocktail_dose_path(@cocktail, @dose), class: "btn-ghost" %></p>
 
-
-  <p><%= link_to "Return to all cocktails", cocktails_path(@cocktails), class: "btn-ghost" %></p>
-</div>

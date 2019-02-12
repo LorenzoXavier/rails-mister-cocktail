@@ -14,12 +14,40 @@
 @import "components/index";
 @import "pages/index";
 
+h1{
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-size: 70px;
+}
+
+h2, p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+// .container{
+//   display: flex;
+// }
+
 .card-category {
-  // display: inline;
-  // margin: 200px;
   background-size: cover;
   background-position: center;
-  height: 459px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  list-style-type: none;
+}
+
+.card-category-small {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +63,8 @@
 .card-product {
   padding: 20px;
   overflow: hidden;
-  height: 120px;
+  height: 200px;
+  width: 30px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -70,7 +99,7 @@
   padding: 16px;
 }
 
-.btn-ghost {
+.btn-ghost-dark {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
@@ -78,10 +107,37 @@
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-  margin-left: 100px;
+}
+.btn-ghost-dark:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #4A4A4A;
+}
+
+.btn-ghost {
+  color: white;
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 .btn-ghost:hover {
   opacity: 1;
   text-decoration: none;
   color: #4A4A4A;
+}
+
+.navbar-lewagon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 30px 24px;
+}
+
+.navbar-lewagon-actions {
+  position: absolute;
+  right: 20px;
 }
